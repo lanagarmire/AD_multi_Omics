@@ -1,0 +1,29 @@
+"","Total","Expected","Hits","Raw p","-log10(p)","Holm adjust","FDR","Impact"
+"Aminoacyl-tRNA biosynthesis",48,0.49548,9,1.1742e-10,9.9303,9.8634e-09,9.8634e-09,0
+"Valine, leucine and isoleucine biosynthesis",8,0.082581,3,4.905e-05,4.3094,0.0040712,0.0020601,0
+"Alanine, aspartate and glutamate metabolism",28,0.28903,4,0.00013388,3.8733,0.010979,0.0037488,0.53446
+"Arginine biosynthesis",14,0.14452,3,0.00030695,3.5129,0.024863,0.006446,0.11675
+"Arginine and proline metabolism",38,0.39226,4,0.00045331,3.3436,0.036264,0.0076155,0.33347
+"Nitrogen metabolism",6,0.061935,2,0.0014636,2.8346,0.11562,0.017563,0
+"D-Glutamine and D-glutamate metabolism",6,0.061935,2,0.0014636,2.8346,0.11562,0.017563,0.5
+"Histidine metabolism",16,0.16516,2,0.011023,1.9577,0.84879,0.11574,0
+"Pantothenate and CoA biosynthesis",19,0.19613,2,0.015427,1.8117,1,0.14398,0
+"Glutathione metabolism",28,0.28903,2,0.032306,1.4907,1,0.27137,0.02685
+"Phenylalanine, tyrosine and tryptophan biosynthesis",4,0.04129,1,0.040694,1.3905,1,0.28297,0.5
+"Glyoxylate and dicarboxylate metabolism",32,0.33032,2,0.041386,1.3831,1,0.28297,0
+"Glycine, serine and threonine metabolism",33,0.34065,2,0.043793,1.3586,1,0.28297,0.09293
+"Linoleic acid metabolism",5,0.051613,1,0.050622,1.2957,1,0.28741,0
+"Glycerophospholipid metabolism",36,0.37161,2,0.051323,1.2897,1,0.28741,0.11182
+"Valine, leucine and isoleucine degradation",40,0.4129,2,0.062041,1.2073,1,0.32571,0
+"Phenylalanine metabolism",10,0.10323,1,0.098834,1.0051,1,0.48836,0.35714
+"alpha-Linolenic acid metabolism",13,0.13419,1,0.12665,0.8974,1,0.59103,0
+"Butanoate metabolism",15,0.15484,1,0.14474,0.8394,1,0.60792,0
+"Nicotinate and nicotinamide metabolism",15,0.15484,1,0.14474,0.8394,1,0.60792,0
+"Selenocompound metabolism",20,0.20645,1,0.18845,0.7248,1,0.71926,0
+"beta-Alanine metabolism",21,0.21677,1,0.19694,0.70566,1,0.71926,0
+"Sphingolipid metabolism",21,0.21677,1,0.19694,0.70566,1,0.71926,0
+"Porphyrin and chlorophyll metabolism",30,0.30968,1,0.26966,0.56918,1,0.94383,0
+"Arachidonic acid metabolism",36,0.37161,1,0.31467,0.50215,1,1,0
+"Fatty acid degradation",39,0.40258,1,0.33618,0.47343,1,1,0
+"Pyrimidine metabolism",39,0.40258,1,0.33618,0.47343,1,1,0
+"Purine metabolism",65,0.67097,1,0.49785,0.3029,1,1,0
