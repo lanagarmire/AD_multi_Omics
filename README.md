@@ -79,8 +79,7 @@ The other files are as follows.
 + [`2_limma_EMCI_MRNA.ipynb`](2_limma_EMCI_MRNA.ipynb) contains the differential analysis based on the MRNA on the EMCI subtypes.
 + [`2_limma_LMCI_META.ipynb`](2_limma_LMCI_META.ipynb) contains the differential analysis based on the metabolomics on the LMCI subtypes.
 + [`2_limma_EMCI_MRNA.ipynb`](2_limma_LMCI_MRNA.ipynb) contains the differential analysis based on the MRNA on the LMCI subtypes.
-+ [`2_SNF_EMCI.ipynb`](2_SNF_EMCI.ipynb) contains the Similarity Network Fusion (SNF) clustering on the EMCI data to get subtypes.
-+ [`2_SNF_LMCI.ipynb`](2_SNF_LMCI.ipynb) contains the Similarity Network Fusion (SNF) clustering on the LMCI data to get subtypes.
++ [`2_SNF_MCI.ipynb`](2_SNF_EMCI.ipynb) contains the Similarity Network Fusion (SNF) clustering on the EMCI and LMCI data to get subtypes.
 + [`2_snf_python_EMCI.ipynb`](2_snf_python_EMCI.ipynb) contains the script to determine the best number of SNF clusters on EMCI data.
 + [`2_snf_python_LMCI.ipynb`](2_snf_python_LMCI.ipynb) contains the script to determine the best number of SNF clusters on LMCI data.
 + [`3_gsea.ipynb`](3_gsea.ipynb)contains the gene set enrichment analysis based on differential analysis results
