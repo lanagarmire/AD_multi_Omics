@@ -1,0 +1,19 @@
+"","Total Cmpd","Hits","Raw p","-log10(p)","Holm adjust","FDR","Impact"
+"Sphingolipid metabolism",32,1,2.0508e-17,16.688,3.6915e-16,1.224e-16,0
+"Arachidonic acid metabolism",44,1,2.7201e-17,16.565,4.6242e-16,1.224e-16,0
+"Linoleic acid metabolism",5,1,2.7201e-17,16.565,4.6242e-16,1.224e-16,0
+"alpha-Linolenic acid metabolism",13,1,2.7201e-17,16.565,4.6242e-16,1.224e-16,0
+"Glycerophospholipid metabolism",36,2,6.7786e-17,16.169,9.4901e-16,2.4403e-16,0.11182
+"Lysine degradation",30,1,6.4651e-05,4.1894,0.00084046,0.00019395,0.11247
+"Histidine metabolism",16,2,0.00026776,3.5723,0.0032131,0.0006371,0.22131
+"Alanine, aspartate and glutamate metabolism",28,1,0.00053092,3.275,0.0058401,0.0006371,0.19712
+"Arginine biosynthesis",14,1,0.00053092,3.275,0.0058401,0.0006371,0.11675
+"Glutathione metabolism",28,1,0.00053092,3.275,0.0058401,0.0006371,0.01966
+"Arginine and proline metabolism",36,1,0.00053092,3.275,0.0058401,0.0006371,0
+"Glyoxylate and dicarboxylate metabolism",32,1,0.00053092,3.275,0.0058401,0.0006371,0
+"Butanoate metabolism",15,1,0.00053092,3.275,0.0058401,0.0006371,0
+"Porphyrin metabolism",31,1,0.00053092,3.275,0.0058401,0.0006371,0
+"Nitrogen metabolism",6,1,0.00053092,3.275,0.0058401,0.0006371,0
+"Tryptophan metabolism",41,1,0.025257,1.5976,0.075772,0.028414,0.14305
+"beta-Alanine metabolism",21,1,0.035088,1.4548,0.075772,0.037152,0
+"Glycine, serine and threonine metabolism",33,1,0.36487,0.43786,0.36487,0.36487,0.09505

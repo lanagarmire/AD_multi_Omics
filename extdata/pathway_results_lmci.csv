@@ -1,0 +1,27 @@
+"","Total Cmpd","Hits","Raw p","-log10(p)","Holm adjust","FDR","Impact"
+"Glycerophospholipid metabolism",36,2,1.5111e-21,20.821,3.9287e-20,3.9287e-20,0.11182
+"Sphingolipid metabolism",32,1,1.1757e-20,19.93,2.9393e-19,1.5285e-19,0
+"Arachidonic acid metabolism",44,1,4.2543e-20,19.371,1.021e-18,2.2122e-19,0
+"Linoleic acid metabolism",5,1,4.2543e-20,19.371,1.021e-18,2.2122e-19,0
+"alpha-Linolenic acid metabolism",13,1,4.2543e-20,19.371,1.021e-18,2.2122e-19,0
+"Glyoxylate and dicarboxylate metabolism",32,2,2.8794e-15,14.541,6.0467e-14,1.0695e-14,0
+"Nitrogen metabolism",6,2,2.8794e-15,14.541,6.0467e-14,1.0695e-14,0
+"Alanine, aspartate and glutamate metabolism",28,4,4.4784e-14,13.349,8.5089e-13,1.4555e-13,0.53446
+"Arginine biosynthesis",14,3,1.0198e-13,12.991,1.8357e-12,2.9462e-13,0.11675
+"Butanoate metabolism",15,1,1.4095e-13,12.851,2.3962e-12,3.3316e-13,0
+"Porphyrin metabolism",31,1,1.4095e-13,12.851,2.3962e-12,3.3316e-13,0
+"Histidine metabolism",16,2,4.4439e-11,10.352,6.6658e-10,9.6284e-11,0
+"Arginine and proline metabolism",36,3,7.0339e-10,9.1528,9.8475e-09,1.3063e-09,0.25349
+"Glutathione metabolism",28,3,7.0339e-10,9.1528,9.8475e-09,1.3063e-09,0.03404
+"Purine metabolism",70,1,1.1648e-08,7.9338,1.3977e-07,1.8927e-08,0
+"Pyrimidine metabolism",39,1,1.1648e-08,7.9338,1.3977e-07,1.8927e-08,0
+"Valine, leucine and isoleucine biosynthesis",8,3,1.9024e-06,5.7207,1.9024e-05,2.9096e-06,0
+"Pantothenate and CoA biosynthesis",20,2,2.913e-06,5.5357,2.6217e-05,4.2077e-06,0
+"Valine, leucine and isoleucine degradation",40,2,5.0624e-06,5.2956,4.0499e-05,6.9275e-06,0
+"Glycine, serine and threonine metabolism",33,2,7.6347e-05,4.1172,0.00053443,9.9251e-05,0.09505
+"Nicotinate and nicotinamide metabolism",15,1,0.00010047,3.998,0.00060282,0.00012439,0
+"Selenocompound metabolism",20,1,0.00091947,3.0365,0.0045974,0.0010601,0
+"beta-Alanine metabolism",21,2,0.0009378,3.0279,0.0045974,0.0010601,0
+"Phenylalanine, tyrosine and tryptophan biosynthesis",4,1,0.0033735,2.4719,0.010121,0.0035085,0.5
+"Phenylalanine metabolism",8,1,0.0033735,2.4719,0.010121,0.0035085,0.35714
+"Fatty acid degradation",39,1,0.0079896,2.0975,0.010121,0.0079896,0
