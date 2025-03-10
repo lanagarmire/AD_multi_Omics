@@ -94,7 +94,7 @@ The other files are as follows.
 
 
 ## Data Availability
-The external data used in this study (located in the `extdata` folder) excluded the EFIGA dataset. Access to the EFIGA data is available upon reasonable request. Please contact the corresponding author for more information regarding data access and usage restrictions.
+The external data used in this study (located in the `extdata` folder) excluded the EFIGA dataset. Access to the EFIGA data is available upon reasonable request. EFIGA Data Request can be made at https://www.neurology.columbia.edu/research/research-centers-and-programs/alzheimers-disease-research-center-adrc/investigators/investigator-resources
 
 
 ## Authors
