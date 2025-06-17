@@ -27,7 +27,7 @@ min_max_scaler = MinMaxScaler()
 norm_data1 = min_max_scaler.fit_transform(intersect_adni_LMCI.to_numpy())
 norm_data2 = min_max_scaler.fit_transform(data2_LMCI)
 
-uc = UnionCom.UnionCom(output_dim=11, epoch_pd=2000, epoch_DNN=0, distance_mode='l2')
+uc = UnionCom.UnionCom(output_dim=11, epoch_pd=2000, epoch_DNN=0, distance_mode='l1')
 integrated_data = uc.fit_transform(dataset=[norm_data1, norm_data2])
 cor_pairs = uc.match(dataset=[norm_data1, norm_data2])
 norm_pat_match = cor_pairs[0]
