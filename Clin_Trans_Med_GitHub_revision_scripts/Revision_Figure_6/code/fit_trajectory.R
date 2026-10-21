@@ -1,0 +1,20 @@
+root<-normalizePath(commandArgs(TRUE)[1])
+suppressPackageStartupMessages({library(monocle3);library(SingleCellExperiment);library(igraph);library(uwot)})
+x<-as.matrix(read.csv(file.path(root,'inputs/EFIGA.csv'),row.names=1,check.names=FALSE));d<-read.csv(file.path(root,'inputs/patients.csv'),row.names=1);d<-d[rownames(x),]
+stopifnot(nrow(x)==149,ncol(x)==54)
+p<-prcomp(x,center=TRUE,scale.=FALSE);importance<-rowSums(sweep(p$rotation[,1:5,drop=FALSE]^2,2,p$sdev[1:5]^2,'*'));features<-names(sort(importance,decreasing=TRUE))[1:40]
+write.csv(data.frame(metabolite=names(importance),PCA5_variance_contribution=importance,selected=names(importance)%in%features),file.path(root,'results/trajectory_feature_selection.csv'),row.names=FALSE)
+xx<-x[,features,drop=FALSE];pca<-prcomp(xx,center=TRUE,scale.=FALSE)$x
+set.seed(666);uv<-uwot::umap(pca[,1:3,drop=FALSE],n_neighbors=50,min_dist=.3,n_threads=1,n_sgd_threads=1,verbose=FALSE);rownames(uv)<-rownames(x)
+expr<-t(xx-min(xx)+1);cds<-new_cell_data_set(expr,cell_metadata=data.frame(label=d$label,row.names=rownames(d)),gene_metadata=data.frame(gene_short_name=rownames(expr),row.names=rownames(expr)))
+reducedDims(cds)$UMAP<-uv;cds<-cluster_cells(cds,k=20,random_seed=666)
+set.seed(666);cds<-learn_graph(cds,use_partition=FALSE,close_loop=FALSE,learn_graph_control=list(ncenter=25,prune_graph=TRUE,minimal_branch_len=3))
+cds<-order_cells(cds,root_pr_nodes='Y_19');d$UMAP1<-uv[,1];d$UMAP2<-uv[,2];d$pseudotime<-as.numeric(pseudotime(cds)[rownames(d)]);stopifnot(all(is.finite(d$pseudotime)))
+reference<-read.csv(file.path(root,'reference/patients.csv'),row.names=1);reference<-reference[rownames(d),];umap_error<-max(abs(as.matrix(d[,c('UMAP1','UMAP2')])-as.matrix(reference[,c('UMAP1','UMAP2')])));pt_error<-max(abs(d$pseudotime-reference$pseudotime));stopifnot(umap_error<1e-7,pt_error<1e-7,identical(d$label,reference$label))
+g<-principal_graph(cds)[['UMAP']];nn<-t(cds@principal_graph_aux[['UMAP']]$dp_mst);ord<-monocle3:::extract_general_graph_ordering(cds,'Y_19',reduction_method='UMAP')
+write.csv(cbind(ID=rownames(d),d),file.path(root,'inputs/patients.csv'),row.names=FALSE);write.csv(cbind(ID=rownames(d),d),file.path(root,'results/patient_labels_pseudotime_biomarkers.csv'),row.names=FALSE);saveRDS(cds,file.path(root,'results/trajectory.rds'))
+write.csv(data.frame(node=rownames(nn),UMAP1=nn[,1],UMAP2=nn[,2],pseudotime=ord[rownames(nn),'pseudo_time']),file.path(root,'inputs/selected_trajectory_nodes.csv'),row.names=FALSE)
+write.csv(as_data_frame(g,what='edges'),file.path(root,'inputs/selected_trajectory_edges.csv'),row.names=FALSE)
+file.copy(file.path(root,'reference/selected_trajectory_configuration.csv'),file.path(root,'inputs/selected_trajectory_configuration.csv'),overwrite=TRUE)
+writeLines(features,file.path(root,'results/trajectory_metabolites.txt'));write.csv(data.frame(n_patients=nrow(d),UMAP_max_error=umap_error,pseudotime_max_error=pt_error,n_native_branch_nodes=sum(degree(g)>2),root_node='Y_19'),file.path(root,'results/trajectory_verification.csv'),row.names=FALSE)
+capture.output(sessionInfo(),file=file.path(root,'results/trajectory_sessionInfo.txt'));cat('Native Monocle3 fit and pseudotime reproduced.\n')
